@@ -218,6 +218,7 @@ ul {
     color: white;
     padding: 5px 10px;
     height: 2rem;
+    background-color: rgba(211, 211, 211, 0.26);
 }
 
 .featured_ads {
@@ -229,14 +230,16 @@ ul {
     margin-bottom: 20px;
 }
 
-.featured_ads_box {
+.featured_ads_box,
+.listing_boxes_filters_left_side_box {
     width: 23%;
     border-radius: 7px;
     background-color: white;
     box-shadow: 0px 0px 34px -23px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.featured_ads_box>img {
+.featured_ads_box>img,
+.listing_boxes_filters_left_side_box>img {
     width: 100%;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -248,12 +251,14 @@ ul {
 }
 
 .featured_ads_box_first_row,
-.trending_today_box_first_row {
+.trending_today_box_first_row,
+.listing_boxes_filters_left_side_box_first_row {
     margin-top: 20px;
 }
 
 .featured_ads_box_matter>p,
-.trending_today_box_first_row_matter>p {
+.trending_today_box_first_row_matter>p,
+.listing_boxes_filters_left_side_box_matter>p {
     font-size: 11px;
     display: inline-block;
     padding: 7px 20px;
@@ -279,29 +284,34 @@ ul {
     border-radius: 50%;
 }
 
-.featured_ads_arrow {
+.featured_ads_arrow,
+.listing_boxes_filters_left_side_arrow {
     justify-content: center;
     gap: 25px;
 }
 
-.featured_ads_arrow i {
+.featured_ads_arrow i,
+.listing_boxes_filters_left_side_arrow i {
     font-size: 30px;
     margin-top: 25px;
 }
 
-.featured_ads_arrow i:hover {
+.featured_ads_arrow i:hover,
+.listing_boxes_filters_left_side_arrow i:hover {
     color: lightseagreen;
 }
 
 .featured_ads_box a,
-.trending_today_box_text a {
+.trending_today_box_text a,
+.listing_boxes_filters_left_side_box a {
     color: blue;
     display: inline-block;
     margin-bottom: 20px;
 }
 
 .featured_ads_box p,
-.trending_today_box_text p {
+.trending_today_box_text p,
+.listing_boxes_filters_left_side_box p {
     margin-bottom: 20px;
 }
 
@@ -674,6 +684,73 @@ ul {
     color: white;
 }
 
+/* listings css code */
+.main_listing {
+    padding-bottom: 200px;
+}
+
+.listing_boxes_filters_wrapper {
+    margin-top: 100px;
+}
+
+.listing_boxes_filters_left_side {
+    width: 75%;
+}
+
+.listing_boxes_filters_right_side {
+    width: 25%;
+    margin-left: 100px;
+}
+
+.listing_boxes_filters_left_side_box_wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+
+.listing_boxes_filters_left_side_box {
+    width: 48%;
+}
+
+.listing_boxes_filters_left_side_box>img {
+    width: 100%;
+}
+
+.listing_boxes_filters_right_side_input {
+    margin-top: 15px;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.listing_boxes_filters_right_side_input>input,
+.listing_boxes_filters_right_side_input>select {
+    width: 100%;
+    height: 50px;
+    border: solid 2px lightgrey;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.listing_boxes_filters_right_side_rang {
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+.listing_boxes_filters_right_side_rang>input {
+    width: 100%;
+}
+
+.listing_boxes_filters_right_side_category {
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+
+.listing_boxes_filters_right_side_wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
 @media(max-width: 600px) {
     .container {
         width: 90%;
@@ -833,13 +910,51 @@ ul {
         width: 70%;
     }
 
-    .copyright{
+    .copyright {
         flex-direction: column;
         gap: 15px;
     }
 
-    .copyright>span{
+    .copyright>span {
         display: none;
     }
+
+    .listing_boxes_filters_wrapper {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .listing_boxes_filters_left_side {
+        width: 100%;
+    }
+
+    .listing_boxes_filters_right_side {
+        width: 100%;
+    }
+
+    .listing_boxes_filters_right_side_input>input,
+    .listing_boxes_filters_right_side_input>select {
+        width: 100%;
+        height: 50px;
+        border: solid 2px lightgrey;
+        padding-left: 10px;
+        background-color: white;
+    }
+
+    .listing_boxes_filters_right_side_rang>input {
+        width: 80%;
+    }
+
+    .listing_boxes_filters_left_side_box_wrapper {
+        flex-direction: column;
+
+    }
+
+    .listing_boxes_filters_left_side_box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
 
 }
